@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: lokeshgudurudotnetdemo 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lokeshgudurudotnetdemo
+  template:
+    metadata:
+      labels:
+        app: lokeshgudurudotnetdemo 
+    spec:
+      containers:
+        - name: lokeshgudurudotnetdemo 
+          image: testcontainerloki.azurecr.io/lokeshgudurudotnetdemo
+          ports:
+          - containerPort: 5000
